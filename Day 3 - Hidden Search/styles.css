@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+body {
+  font-family: "Muli", Courier, monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.search {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+.input{
+    height: 28px;
+
+}
+
+.btn {
+  width: 22px;
+  height: 22px;
+  border: 1px solid black;
+  padding: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
