@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+body {
+  font-family: "Muli", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+}
+
+.container {
+  position: relative;
+  width: 300px;
+}
+
+.output {
+  display: flex;
+  gap: 10px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.event-key,
+.event-code,
+.event-keyCode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+small {
+  position: absolute;
+  top: -4px;
+}
+
+p {
+  border: 1px solid gray;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+}
+
+.btn {
+  display: flex;
+  width: 330px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -1px;
+  left: -18px;
+}
