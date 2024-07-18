@@ -9,3 +9,19 @@ body {
   overflow: hidden;
   margin: 0;
 }
+
+.image {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(0px);
+}
+.loading-text {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}
