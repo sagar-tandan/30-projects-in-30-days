@@ -45,6 +45,7 @@ body {
 p {
   font-weight: bold;
   font-size: 22px;
+  padding: 0px 20px;
 }
 h1 {
   margin-bottom: 6px;
