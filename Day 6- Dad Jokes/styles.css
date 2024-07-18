@@ -3,10 +3,10 @@
 body {
   font-family: "Muli", Courier, monospace;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
+  background-color: rgb(62, 161, 227);
 }
 
 .container {
@@ -17,6 +17,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 
 .btn {
@@ -28,6 +29,7 @@ body {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  margin-bottom: 10px;
   transition: background-color 0.5s ease-in-out;
 }
 
