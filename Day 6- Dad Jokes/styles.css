@@ -8,3 +8,43 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+
+.container {
+  width: 400px;
+  background-color: burlywood;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: rgb(159, 89, 224);
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.btn:hover {
+  background-color: blueviolet;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+p {
+  font-weight: bold;
+  font-size: 22px;
+}
+h1 {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: rgb(253, 253, 253);
+}
