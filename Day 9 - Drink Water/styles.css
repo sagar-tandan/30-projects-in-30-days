@@ -4,9 +4,8 @@ body {
   font-family: "Muli", Courier, monospace;
   display: flex;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: white;
+  background-color: rgb(43, 145, 185);
 }
 
