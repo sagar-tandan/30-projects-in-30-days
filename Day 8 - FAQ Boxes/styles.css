@@ -59,6 +59,23 @@ h1 {
   transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
 }
 
+.answer.active {
+  padding: 20px 10px;
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
 
+.plus {
+  transition: transform 0.5s ease;
+}
+
+
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
