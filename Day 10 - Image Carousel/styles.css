@@ -6,5 +6,25 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  background-color: blueviolet;
+  background-color: white;
+}
+.carousel {
+  width: 1024px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+}
+
+.images {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+img {
+  width: 1024px;
+  height: 500px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
