@@ -34,7 +34,7 @@ body {
 
 .type {
   width: 400px;
-  height: 40px;
+  height: 45px;
   padding: 0px 10px;
   border: 1px solid black;
   border-radius: 6px;
@@ -86,13 +86,22 @@ body {
 .toast {
   background-color: white;
   margin: 5px;
-  padding: 10px;
-  width: 200px;
+  padding: 0px 10px;
+  width: 250px;
   font-size: 16px;
   border-radius: 4px;
   transform: translateX(250px);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+
+.toast img{
+  width: 24px;
+  height: 24px;
 }
 
 .toast.active {
@@ -101,7 +110,7 @@ body {
 }
 
 .toast.Success{
-  color: rgb(3, 251, 3);
+  color: #0aa06e;
 }
 
 .toast.Error{
@@ -109,5 +118,5 @@ body {
 }
 
 .toast.info{
-  color: blue;
+  color: #0a4eaf;
 }

@@ -10,7 +10,19 @@ button.addEventListener("click", () => {
   const toast = document.createElement("div");
   toast.classList.add("toast");
   toast.classList.add(type);
-  toast.innerText = message ? message : "Random Message";
+  toast.innerHTML = `<img src="" alt="">
+          <p>${message ? message : "This is a toast"}</p>`;
+
+  //   now setting images
+  const image = toast.querySelector("img");
+  if (toast.classList.contains("Success")) {
+    image.src = "https://cdn-icons-png.flaticon.com/128/190/190411.png";
+  } else if (toast.classList.contains("Error")) {
+    image.src = "https://cdn-icons-png.flaticon.com/128/190/190406.png";
+  } else {
+    image.src = "https://cdn-icons-png.flaticon.com/128/785/785822.png";
+  }
+
   toasts.appendChild(toast);
 
   // Adding the active class after a short delay
