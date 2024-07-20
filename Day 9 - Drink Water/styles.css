@@ -99,3 +99,15 @@ body {
   transform: translateX(0);
   opacity: 1;
 }
+
+.toast.Success{
+  color: rgb(3, 251, 3);
+}
+
+.toast.Error{
+  color: red;
+}
+
+.toast.info{
+  color: blue;
+}

@@ -1,12 +1,15 @@
 const button = document.getElementById("btn");
 const toasts = document.querySelector(".toasts");
 const input = document.querySelector(".message");
+const types = document.getElementById("type");
 
 button.addEventListener("click", () => {
   const message = input.value;
-  console.log(message);
+  const type = types.value;
+
   const toast = document.createElement("div");
   toast.classList.add("toast");
+  toast.classList.add(type);
   toast.innerText = message ? message : "Random Message";
   toasts.appendChild(toast);
 
