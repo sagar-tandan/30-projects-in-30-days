@@ -46,9 +46,10 @@ img {
   width: 40px;
   height: 100%;
   display: flex;
-  /* background-color: rgba(0, 0, 0, 0.43); */
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .next {
@@ -57,4 +58,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.43);
 }
