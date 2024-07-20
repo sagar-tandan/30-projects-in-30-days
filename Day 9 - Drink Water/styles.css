@@ -3,9 +3,46 @@
 body {
   font-family: "Muli", Courier, monospace;
   display: flex;
+
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  background-color: rgb(43, 145, 185);
+  background-color: blueviolet;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 200px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  color: blueviolet;
+  font-size: 16px;
+}
+
+.toast {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  padding: 10px;
+  width: 200px;
+  border-radius: 4px;
+  font-size: 16px;
+  transform: translateX(250px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.toast.active {
+  transform: translateX(0);
+  opacity: 1;
+}
