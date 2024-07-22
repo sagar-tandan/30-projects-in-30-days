@@ -17,9 +17,13 @@ body {
 }
 
 .square {
-  background-color: rgb(62, 62, 62);
+  background-color: #3e3e3e;
   width: 16px;
   height: 16px;
   margin: 2px;
-  transition: all 0.3s ease-in-out;
+  transition: 1.5s ease;
+}
+
+.square:hover {
+  transition-duration: 0s;
 }
