@@ -31,8 +31,9 @@ body {
   height: 3px;
   background-color: white;
   border-radius: 10px;
-  animation: grow 10s;
+  animation: grow 8s linear infinite;
   transform-origin: left;
+  margin-top: 10px;
 }
 
 .details {
@@ -50,6 +51,7 @@ body {
   border-radius: 50%;
   width: 60px;
   height: 60px;
+  object-fit: cover;
 }
 h3 {
   margin: 0px;
