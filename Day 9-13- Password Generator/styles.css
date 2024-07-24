@@ -15,10 +15,11 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .testimonial {
-  background-color: blue;
+  background-color: rgb(86, 86, 183);
   width: 600px;
   height: auto;
   padding: 10px 10px;
@@ -30,8 +31,38 @@ body {
   height: 3px;
   background-color: white;
   border-radius: 10px;
+  animation: grow 10s;
+  transform-origin: left;
 }
 
 .details {
-  padding: 10px;
+  padding: 0px 10px;
+}
+
+.image-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.image-div img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+h3 {
+  margin: 0px;
+  color: white;
+  font-size: 20px;
+}
+
+.profession {
+  font-size: 15px;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
 }
