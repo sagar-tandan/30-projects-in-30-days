@@ -26,7 +26,7 @@ function getTodo() {
     container.appendChild(allTodo);
     const todoArray = JSON.parse(allTodos);
     todoArray.forEach((todo) => {
-      finaltodo.push({id: 1, value: todo.value, checked: todo.checked });
+      finaltodo.push({ id: 1, value: todo.value, checked: todo.checked });
     });
   }
 }
@@ -40,17 +40,22 @@ function addTodo(todo) {
 }
 
 function mapTodo() {
-  finaltodo.forEach((todo) => {
+  finaltodo.forEach((todo, index) => {
     const oneTodo = document.createElement("div");
     oneTodo.classList.add("oneTodo");
     const input1 = document.createElement("input");
     input1.id = "checkbox";
     input1.type = "checkbox";
+    input1.checked = todo.checked;
+    input1.addEventListener("change", () => changeCheckValue(index));
     oneTodo.appendChild(input1);
     const input2 = document.createElement("input");
     input2.id = "actualtodo";
     input2.type = "text";
     input2.value = todo.value;
+    if (todo.checked) {
+      input2.style.textDecoration = `line-through`;
+    }
     input2.disabled = true;
     oneTodo.appendChild(input2);
     const image = document.createElement("img");
@@ -58,7 +63,32 @@ function mapTodo() {
     image.classList.add("delete");
     oneTodo.appendChild(image);
     allTodo.appendChild(oneTodo);
+    const horizontal = document.createElement("hr");
+    allTodo.appendChild(horizontal);
   });
 }
 
 mapTodo();
+
+function changeCheckValue(index) {
+  const updatedTodo = [];
+  finaltodo[index].checked = !finaltodo[index].checked;
+  const completedTodo = finaltodo[index];
+  const nowTodo = {
+    value: completedTodo.value,
+    checked: finaltodo[index].checked,
+  };
+  for (let i = 0; i < finaltodo.length; i++) {
+    if (i == index) {
+      updatedTodo.push(nowTodo);
+    } else {
+      updatedTodo.push(finaltodo[i]);
+    }
+  }
+
+  uploadWholeTodo(updatedTodo);
+}
+
+function uploadWholeTodo(todo) {
+  localStorage.setItem("TODO", JSON.stringify(todo));
+}
