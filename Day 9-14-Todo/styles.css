@@ -17,7 +17,6 @@ body {
   height: 100vh;
   background-color: #9d57f3;
   flex-direction: column;
-  padding-top: 20px;
 }
 
 .todo {
@@ -26,6 +25,7 @@ body {
   border-radius: 4px;
   display: flex;
   gap: 20px;
+  margin-top: 20px;
 }
 .todo-list {
   border: 1px solid rgb(152, 152, 152);
