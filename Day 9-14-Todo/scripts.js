@@ -58,9 +58,15 @@ function mapTodo() {
     }
     input2.disabled = true;
     oneTodo.appendChild(input2);
+    const image2 = document.createElement("img");
+    image2.src = "  https://cdn-icons-png.flaticon.com/128/17328/17328580.png";
+    image2.classList.add("delete");
+    oneTodo.appendChild(image2);
+    image2.addEventListener("click", () => editTodo(index, input2));
     const image = document.createElement("img");
     image.src = "https://cdn-icons-png.flaticon.com/128/6861/6861362.png";
     image.classList.add("delete");
+    image.addEventListener("click", () => deleteTodo(index));
     oneTodo.appendChild(image);
     allTodo.appendChild(oneTodo);
     const horizontal = document.createElement("hr");
@@ -87,9 +93,23 @@ function changeCheckValue(index) {
   }
 
   uploadWholeTodo(updatedTodo);
-  location.reload();
 }
 
 function uploadWholeTodo(todo) {
   localStorage.setItem("TODO", JSON.stringify(todo));
+  location.reload();
+}
+
+function deleteTodo(index) {
+  finaltodo.splice(index, 1);
+  uploadWholeTodo(finaltodo);
+}
+
+function editTodo(index, input) {
+  input.disabled = false;
+  input.focus();
+  input.style.cursor = "text";
+  input.style.outline = "none";
+
+ 
 }
