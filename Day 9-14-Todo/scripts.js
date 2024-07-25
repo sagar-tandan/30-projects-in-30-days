@@ -4,6 +4,8 @@ const container = document.querySelector(".container");
 // const allTodo = document.querySelector(".allTodo");
 const allTodo = document.createElement("div");
 allTodo.classList.add("allTodo");
+allTodo.innerText = "Here are all of your todo tasks";
+container.appendChild(allTodo);
 
 let finaltodo = [];
 
@@ -22,7 +24,6 @@ button.addEventListener("click", () => {
 function getTodo() {
   const allTodos = localStorage.getItem("TODO");
   if (allTodos) {
-    container.appendChild(allTodo);
     const todoArray = JSON.parse(allTodos);
     todoArray.forEach((todo) => {
       finaltodo.push({ value: todo.value, checked: todo.checked });
@@ -34,13 +35,14 @@ function addTodo(todo) {
   finaltodo.push({ value: todo, checked: false });
   localStorage.setItem("TODO", JSON.stringify(finaltodo));
   todoedit.value = "";
-  renderTodo();
+  location.reload();
 }
 
 function mapTodo() {
   finaltodo.forEach((todo, index) => {
     const oneTodo = document.createElement("div");
     oneTodo.classList.add("oneTodo");
+    oneTodo.style.marginTop = `20px`;
     const input1 = document.createElement("input");
     input1.id = "checkbox";
     input1.type = "checkbox";
