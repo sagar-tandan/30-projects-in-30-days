@@ -87,6 +87,7 @@ function changeCheckValue(index) {
   }
 
   uploadWholeTodo(updatedTodo);
+  location.reload();
 }
 
 function uploadWholeTodo(todo) {
