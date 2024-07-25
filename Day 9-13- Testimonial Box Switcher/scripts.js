@@ -7,8 +7,8 @@ let allComments = [
   {
     id: "1",
     image:
-      "https://th.bing.com/th/id/OIP.MA4ZenZ8G9vcE_9P-IwFiwHaE8?rs=1&pid=ImgDetMain",
-    name: "Will Smith",
+      "https://th.bing.com/th/id/OIP.VqPvGsWqGrrSoL9sw4FsJAHaHa?w=183&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    name: "Prabhas",
     profession: "Actor",
     comment:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsamtenetur ab corrupti quas! Maxime quibusdam praesentium facere eosquis dicta laborum, placeat alias saepe nesciunt unde nihil   repellendus voluptatum ullam maxime excepturi iste officia sed saepetotam sint, repudiandae, error optio possimus delectus.",
