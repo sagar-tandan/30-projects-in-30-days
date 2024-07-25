@@ -128,5 +128,6 @@ function editTodo(index, input1, input2, image2) {
 
 function renderTodo() {
   allTodo.innerHTML = "";
+  allTodo.innerText = "Here are all of your todo tasks";
   mapTodo();
 }
