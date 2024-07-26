@@ -17,13 +17,25 @@ body {
   position: relative;
 }
 
-img {
+img.menu {
   width: 18px;
   margin: 10px;
   height: auto;
   position: absolute;
   top: 0;
-  z-index: 2;
+}
+
+.logo-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.logo-div .close {
+  width: 18px;
+  height: 18px;
+}
+svg.logo {
+  width: 100px;
 }
 
 .black {
@@ -47,7 +59,6 @@ img {
   background-color: white;
   width: 265px;
   position: absolute;
-  padding-top: 30px;
   top: 0;
   left: 0;
   bottom: 0;
@@ -57,6 +68,7 @@ img {
 
 ul li {
   list-style-type: none;
+  padding: 0px;
 }
 
 .white.active {
