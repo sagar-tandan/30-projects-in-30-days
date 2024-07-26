@@ -13,10 +13,14 @@ body {
 .container {
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 
-img{
-
+img {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  top: 0;
 }
 
 ul li {
