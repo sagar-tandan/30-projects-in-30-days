@@ -29,7 +29,7 @@ img {
 .black {
   background-color: black;
   width: 295px;
-  transition: transform 1s ease-in-out;
+  transition: transform 1.2s linear;
 }
 
 .red {
@@ -40,7 +40,7 @@ img {
   left: 0;
   bottom: 0;
   z-index: 1;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s linear;
 }
 
 .white {
@@ -52,7 +52,7 @@ img {
   left: 0;
   bottom: 0;
   z-index: 1;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s linear;
 }
 
 ul li {
