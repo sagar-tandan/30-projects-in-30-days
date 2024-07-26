@@ -29,6 +29,7 @@ img {
 .black {
   background-color: black;
   width: 295px;
+  transition: transform 1s ease-in-out;
 }
 
 .red {
@@ -39,6 +40,7 @@ img {
   left: 0;
   bottom: 0;
   z-index: 1;
+  transition: transform 0.6s ease-in-out;
 }
 
 .white {
@@ -50,8 +52,20 @@ img {
   left: 0;
   bottom: 0;
   z-index: 1;
+  transition: transform 0.3s ease-in-out;
 }
 
 ul li {
   list-style-type: none;
+}
+
+.white.active {
+  transform: translateX(-265px);
+}
+.red.active {
+  transform: translateX(-280px);
+}
+
+.black.active {
+  transform: translateX(-295px);
 }
