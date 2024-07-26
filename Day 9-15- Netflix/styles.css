@@ -18,7 +18,7 @@ body {
 }
 
 img {
-  width: 25px;
+  width: 18px;
   margin: 10px;
   height: auto;
   position: absolute;
@@ -29,7 +29,7 @@ img {
 .black {
   background-color: black;
   width: 295px;
-  transition: transform 1.2s linear;
+  transition: transform 0.5s ease-in-out; /* Increased duration and added easing */
 }
 
 .red {
@@ -40,7 +40,7 @@ img {
   left: 0;
   bottom: 0;
   z-index: 1;
-  transition: transform 0.6s linear;
+  transition: transform 0.5s ease-in-out; /* Increased duration and added easing */
 }
 
 .white {
@@ -52,7 +52,7 @@ img {
   left: 0;
   bottom: 0;
   z-index: 1;
-  transition: transform 0.2s linear;
+  transition: transform 0.5s ease-in-out; /* Increased duration and added easing */
 }
 
 ul li {
