@@ -58,14 +58,12 @@ input {
   justify-content: start;
   align-items: center;
   gap: 10px;
-  
 }
 
 .user {
   width: 50px;
   height: 50px;
   border-radius: 100px;
-
 }
 
 .user-info {
@@ -83,4 +81,11 @@ input {
 
 p {
   margin: 0px;
+}
+
+.userdiv .add {
+  display: inline-block;
+}
+.userdiv.remove {
+  display: none;
 }

@@ -2,6 +2,9 @@ const filter = document.getElementById("filter");
 const user_Container = document.querySelector(".user-container");
 
 fetchrandomUser();
+filter.addEventListener("input", () => filterUsers(filter.value));
+
+const userCollectionDiv = [];
 
 async function fetchrandomUser() {
   const response = await fetch("https://randomuser.me/api/?results=50");
@@ -14,6 +17,7 @@ function mapEachUser(users) {
   users.map((user) => {
     const userdiv = document.createElement("div");
     userdiv.classList.add("userdiv");
+    userdiv.classList.add("add");
     console.log(user);
     userdiv.innerHTML = `
           <img
@@ -29,6 +33,18 @@ function mapEachUser(users) {
         `;
 
     user_Container.appendChild(userdiv);
-    console.log(userdiv);
+    userCollectionDiv.push(userdiv);
+    // console.log(userdiv);
+  });
+}
+
+function filterUsers(keyword) {
+  //   console.log(keyword);
+  userCollectionDiv.forEach((user) => {
+    if (user.innerText.toLowerCase().includes(keyword.toLowerCase())) {
+      user.classList.remove("remove");
+    } else {
+      user.classList.add("remove");
+    }
   });
 }
