@@ -18,16 +18,17 @@ function mapEachUser(users) {
     userdiv.innerHTML = `
           <img
             class="user"
-            src="https://www.bing.com/th?id=OIP.DHyFcS5hHaDKu-ozXYHR6gHaLG&w=146&h=219&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
-            alt=""
+            src=${user.picture.large}
+            alt = 'loading'
           />
 
           <div class="user-info">
-            <p class="userName">Prabhas</p>
-            <p class="userLocation">Tamilnadu, India</p>
+            <p class="userName">${user.name.first} ${user.name.last}</p>
+            <p class="userLocation">${user.location.state} , ${user.location.country}</p>
           </div>
         `;
 
     user_Container.appendChild(userdiv);
+    console.log(userdiv);
   });
 }
