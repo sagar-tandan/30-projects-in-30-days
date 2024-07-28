@@ -8,7 +8,6 @@ body {
   min-height: 100vh;
   margin: 0;
   background: linear-gradient(to bottom, lightblue, lightgreen);
-  overflow: hidden;
 }
 
 .container {
@@ -17,18 +16,19 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px;
+  width: 800px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .inputdiv {
-  background-color: white;
-  width: 600px;
+  width: 100%;
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  border-radius: 10px 10px 0px 0px ;
 }
 
 .inputdiv #input {
@@ -57,4 +57,21 @@ body {
 
 h1 {
   font-size: 16px;
+}
+
+.images {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
 }
