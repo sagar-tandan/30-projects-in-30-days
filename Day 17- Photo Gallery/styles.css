@@ -76,3 +76,12 @@ img {
   height: 250px;
   border-radius: 5px;
 }
+
+.para {
+  font-size: 14px;
+  color: red;
+  margin: 8px;
+}
+.para.hidden {
+  display: none;
+}
