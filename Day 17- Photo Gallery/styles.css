@@ -28,7 +28,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
 }
 
 .inputdiv #input {
@@ -36,9 +35,11 @@ body {
   width: 300px;
   border: 1px solid lightblue;
   border-radius: 4px;
+  margin: 0px;
 }
 
 .btn {
+  margin-top: 15px;
   background-color: lightgreen;
   border: none;
   padding: 10px 20px;
