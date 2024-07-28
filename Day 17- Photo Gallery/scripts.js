@@ -8,7 +8,7 @@ let allPhotos = [];
 btn.addEventListener("click", () => handleClick());
 
 function handleClick() {
-  images.innerHTML = ``;
+//   images.innerHTML = ``;
   if (input.value < 1 || input.value > 10) {
     info.classList.remove("hidden");
   } else {
@@ -18,12 +18,14 @@ function handleClick() {
 }
 
 async function fetchPhotos(number) {
+  images.innerHTML = `<img src=spinner.svg alt="">`;
   const response = await fetch(
     `https://api.unsplash.com/photos?per_page=${number}&page=${Math.round(
       Math.random() * 1000
     )}&client_id=B8S3zB8gCPVCvzpAhCRdfXg_aki8PZM_q5pAyzDUvlc`
   );
   allPhotos = await response.json();
+  images.innerHTML = ``;
 
   MapallPhotos();
 }
