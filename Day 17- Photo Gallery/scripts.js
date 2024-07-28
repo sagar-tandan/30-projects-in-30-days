@@ -8,6 +8,7 @@ let allPhotos = [];
 btn.addEventListener("click", () => handleClick());
 
 function handleClick() {
+  images.innerHTML = ``;
   if (input.value < 1 || input.value > 10) {
     info.classList.remove("hidden");
   } else {
@@ -23,11 +24,14 @@ async function fetchPhotos(number) {
     )}&client_id=B8S3zB8gCPVCvzpAhCRdfXg_aki8PZM_q5pAyzDUvlc`
   );
   allPhotos = await response.json();
+
   MapallPhotos();
 }
 
 function MapallPhotos() {
-    allPhotos.map((photo)=>{
-        
-    })
+  allPhotos.map((photo) => {
+    const image = document.createElement("img");
+    image.src = `${photo.urls.regular}`;
+    images.appendChild(image);
+  });
 }
