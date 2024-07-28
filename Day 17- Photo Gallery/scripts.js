@@ -1,6 +1,7 @@
 const input = document.getElementById("input");
 const btn = document.getElementById("button");
 const info = document.getElementById("value");
+const images = document.querySelector(".images");
 
 let allPhotos = [];
 
@@ -25,6 +26,8 @@ async function fetchPhotos(number) {
   MapallPhotos();
 }
 
-function MapallPhotos (){
-    
+function MapallPhotos() {
+    allPhotos.map((photo)=>{
+        
+    })
 }
