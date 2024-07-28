@@ -16,7 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px;
-  width: 800px;
+  width: 600px;
   background-color: white;
   border-radius: 10px;
 }
@@ -72,8 +72,8 @@ h1 {
 }
 
 img {
-  width: 250px;
-  height: 250px;
+  width: 280px;
+  height: 280px;
   border-radius: 5px;
 }
 
