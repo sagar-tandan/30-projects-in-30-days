@@ -22,6 +22,9 @@ const colors = [
   "#16a34a",
   "#16a34a",
 ];
+let i = [];
+let clickedCard = [];
+let count = 0;
 
 //Fisher Yates Shuffling Algorithm
 function shuffleArray(array) {
@@ -34,10 +37,6 @@ function shuffleArray(array) {
 
 // Shuffle the colors
 const shuffledColors = shuffleArray([...colors]);
-let i = [];
-let clickedCard = [];
-let count = 0;
-let matchedColor = [];
 
 cards.forEach((card, index) => {
   card.addEventListener("click", () => {
@@ -45,7 +44,6 @@ cards.forEach((card, index) => {
     setColor(card, index);
     i.push(card.style.backgroundColor);
     clickedCard.push(card);
-    console.log(i);
     if (count > 1) {
       checkColor();
     }
@@ -63,15 +61,12 @@ function setColor(card, index) {
 
 function checkColor() {
   if (i[0] === i[1]) {
-    // console.log("Color matched");
-    matchedColor.push(clickedCard);
-    console.log("This is matchedColor", matchedColor);
     clickedCard.forEach((card) => {
       card.classList.add("matched");
     });
     count = 0;
     i.splice(0);
-    console.log("This is splioced array: ", i);
+    clickedCard.splice(0);
   } else {
     clickedCard.forEach((card) => {
       console.log(card);
