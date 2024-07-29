@@ -40,6 +40,8 @@ cards.forEach((card, index) => {
     card.classList.toggle("active");
     if (card.className.includes("active")) {
       card.style.backgroundColor = shuffledColors[index];
+    } else {
+      card.style.backgroundColor = `burlywood`;
     }
   });
 });
