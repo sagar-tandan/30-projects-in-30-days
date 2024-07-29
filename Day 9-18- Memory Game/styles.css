@@ -88,3 +88,7 @@ img {
 .btn:active {
   transform: scale(0.98);
 }
+
+.card.unclicked {
+  pointer-events: none;
+}

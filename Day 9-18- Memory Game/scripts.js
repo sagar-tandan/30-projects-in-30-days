@@ -2,8 +2,13 @@ const cards = document.querySelectorAll(".card");
 const container = document.querySelector(".container");
 const startbtn = document.getElementById("start");
 
+cards.forEach((card) => {
+  card.classList.add("unclicked");
+});
+
 startbtn.addEventListener("click", () => {
   cards.forEach((card, index) => {
+    card.classList.remove("unclicked");
     setColor(card, index);
     setTimeout(() => {
       card.innerHTML = ``;
@@ -19,7 +24,7 @@ let complete = 0;
 function onFinishedLoad() {
   complete = 0; // Reset complete counter
   cards.forEach((card) => {
-    if (card.className.includes("matched")) {
+    if (card.classList.contains("matched")) {
       complete++;
     }
   });
@@ -38,29 +43,6 @@ function onFinishedLoad() {
     }, 500);
   }
 }
-
-// const colors = [
-//   "#3352d6",
-//   "#3352d6",
-//   "#fe0000",
-//   "#fe0000",
-//   "#20ab8e",
-//   "#20ab8e",
-//   "#8052ec",
-//   "#8052ec",
-//   "#121212",
-//   "#121212",
-//   "#f87316",
-//   "#f87316",
-//   "#fbc20c",
-//   "#fbc20c",
-//   "#94a3b8",
-//   "#94a3b8",
-//   "#414e55",
-//   "#414e55",
-//   "#16a34a",
-//   "#16a34a",
-// ];
 
 const colors = [
   "./images/antman.jpg",
@@ -88,6 +70,7 @@ const colors = [
 let i = [];
 let clickedCard = [];
 let count = 0;
+let checkSameIndex = [];
 
 // Fisher Yates Shuffling Algorithm
 function shuffleArray(array) {
@@ -103,22 +86,38 @@ const shuffledColors = shuffleArray([...colors]);
 
 cards.forEach((card, index) => {
   card.addEventListener("click", () => {
+    if (
+      card.classList.contains("matched") ||
+      card.classList.contains("active")
+    ) {
+      return; // Ignore clicks on matched or already active cards
+    }
+
     count++;
     setColor(card, index);
+    checkSameIndex.push(index);
+
     i.push(card.innerHTML);
-    // console.log(card.innerHTML);
     clickedCard.push(card);
     if (count > 1) {
-      checkColor();
+      if (checkSameIndex[0] === checkSameIndex[1]) {
+        card.classList.remove("active");
+        card.innerHTML = ``;
+        card.style.backgroundColor = `burlywood`;
+        i = [];
+        checkSameIndex = [];
+        clickedCard = [];
+      } else {
+        checkColor();
+      }
     }
   });
 });
 
 function setColor(card, index) {
   card.classList.toggle("active");
-  if (card.className.includes("active")) {
-    // card.style.backgroundColor = shuffledColors[index];
-    card.innerHTML = `<img src= ${shuffledColors[index]} alt="">`;
+  if (card.classList.contains("active")) {
+    card.innerHTML = `<img src="${shuffledColors[index]}" alt="">`;
   } else {
     card.style.backgroundColor = `burlywood`;
   }
@@ -130,20 +129,20 @@ function checkColor() {
       card.classList.add("matched");
     });
     count = 0;
-    i.splice(0);
-    clickedCard.splice(0);
+    checkSameIndex = [];
+    i = [];
+    clickedCard = [];
     onFinishedLoad(); // Check if all cards are matched
   } else {
     clickedCard.forEach((card) => {
-      console.log(card);
       setTimeout(() => {
         card.classList.remove("active");
         card.innerHTML = ``;
         card.style.backgroundColor = `burlywood`;
-        clickedCard.pop();
-        i.pop();
       }, 500);
-      count = 0;
     });
+    clickedCard = [];
+    i = [];
+    count = 0;
   }
 }
