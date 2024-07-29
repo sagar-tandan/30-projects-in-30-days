@@ -33,5 +33,5 @@ body {
 
 .card.active {
   transform: rotateY(180deg);
-  background-color: red;
+  /* background-color: red; */
 }
