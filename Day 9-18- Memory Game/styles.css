@@ -24,7 +24,7 @@ body {
   height: 100px;
   margin: 10px;
   border-radius: 3px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, opacity 0.5s ease-in;
 }
 
 .card:hover {
@@ -34,4 +34,9 @@ body {
 .card.active {
   transform: rotateY(180deg);
   /* background-color: red; */
+}
+
+.card.matched {
+  pointer-events: none;
+  opacity: 50%;
 }

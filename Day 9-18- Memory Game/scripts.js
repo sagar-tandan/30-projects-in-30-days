@@ -64,6 +64,14 @@ function setColor(card, index) {
 function checkColor() {
   if (i[0] === i[1]) {
     // console.log("Color matched");
+    matchedColor.push(clickedCard);
+    console.log("This is matchedColor", matchedColor);
+    clickedCard.forEach((card) => {
+      card.classList.add("matched");
+    });
+    count = 0;
+    i.splice(0);
+    console.log("This is splioced array: ", i);
   } else {
     clickedCard.forEach((card) => {
       console.log(card);
