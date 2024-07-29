@@ -15,8 +15,8 @@ const colors = [
   "#f87316",
   "#fbc20c",
   "#fbc20c",
-  "#d4b59e",
-  "#d4b59e",
+  "#94a3b8",
+  "#94a3b8",
   "#414e55",
   "#414e55",
   "#16a34a",
@@ -34,14 +34,46 @@ function shuffleArray(array) {
 
 // Shuffle the colors
 const shuffledColors = shuffleArray([...colors]);
+let i = [];
+let clickedCard = [];
+let count = 0;
+let matchedColor = [];
 
 cards.forEach((card, index) => {
   card.addEventListener("click", () => {
-    card.classList.toggle("active");
-    if (card.className.includes("active")) {
-      card.style.backgroundColor = shuffledColors[index];
-    } else {
-      card.style.backgroundColor = `burlywood`;
+    count++;
+    setColor(card, index);
+    i.push(card.style.backgroundColor);
+    clickedCard.push(card);
+    console.log(i);
+    if (count > 1) {
+      checkColor();
     }
   });
 });
+
+function setColor(card, index) {
+  card.classList.toggle("active");
+  if (card.className.includes("active")) {
+    card.style.backgroundColor = shuffledColors[index];
+  } else {
+    card.style.backgroundColor = `burlywood`;
+  }
+}
+
+function checkColor() {
+  if (i[0] === i[1]) {
+    // console.log("Color matched");
+  } else {
+    clickedCard.forEach((card) => {
+      console.log(card);
+      setTimeout(() => {
+        card.classList.remove("active");
+        card.style.backgroundColor = `burlywood`;
+        clickedCard.pop();
+        i.pop();
+      }, 500);
+      count = 0;
+    });
+  }
+}
