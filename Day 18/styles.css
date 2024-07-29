@@ -23,4 +23,15 @@ body {
   width: 100px;
   height: 100px;
   margin: 10px;
+  border-radius: 3px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card.active {
+  transform: rotateY(180deg);
+  background-color: red;
 }
