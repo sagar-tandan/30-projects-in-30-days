@@ -7,5 +7,20 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background: linear-gradient(to bottom, lightblue, lightgreen);
+  /* background: linear-gradient(to bottom, lightblue, lightgreen); */
+}
+
+.container {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: burlywood;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
 }
