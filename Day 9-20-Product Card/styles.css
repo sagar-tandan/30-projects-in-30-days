@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+body {
+  font-family: "Muli", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: rgb(38, 38, 38);
+}
+
+.container {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.top-div {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(to bottom, orange, orangered);
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  color: white;
+}
+.details {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+.details .name .first {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.details .name .spoort {
+  font-size: 21px;
+  font-weight: bolder;
+  margin: 0px;
+}
+
+.details .name .button {
+  margin-left: 10px;
+  background-color: #13d024;
+  padding: 2px 4px;
+  color: white;
+  border-radius: 2px;
+  font-size: 13px;
+}
+
+.basketball {
+  font-size: 18px;
+  margin-top: 3px;
+}
+
+.rating {
+  font-size: 28px;
+}
+p {
+  margin: 0px;
+  font-size: 18px;
+}
+
+.buttondiv {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.buttondiv .viewdetails {
+  background-color: #2c8bdb;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+.buttondiv .price {
+  background-color: #13d024;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: white;
+}
+
+.buttondiv .viewdetails:active {
+  transform: scale(0.98);
+}
+
+.nike {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  padding: 10px;
+}
+
+.shoe {
+  position: absolute;
+  right: -80px;
+  top: -30px;
+  transition: transform 0.3s ease-in-out;
+}
+.top-div h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 60px 0 0 0;
+  padding: 0px 30px;
+}
+.top-div p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px 30px;
+}
+
+/* img {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transform: translateY(-157px);
+} */
+
+.shoe:hover {
+  transform: translateX(30px);
+}
