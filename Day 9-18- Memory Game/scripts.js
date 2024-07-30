@@ -14,7 +14,7 @@ startbtn.addEventListener("click", () => {
       card.innerHTML = ``;
       card.style.backgroundColor = `burlywood`;
       card.classList.remove("active");
-    }, 2000);
+    }, 1500);
   });
   startbtn.remove();
 });
