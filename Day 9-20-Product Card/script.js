@@ -63,6 +63,9 @@ viewdetails.addEventListener("click", () => {
             <span>Add to cart</span>
           </div>`;
   //   top_div.innerHTML = ``;
+  const ratings = document.querySelector(".rating");
+  ratings.classList.add("active");
+
   const imageDiv = document.querySelector(".image_slider");
 
   const thumb1 = document.getElementById("thumb1");

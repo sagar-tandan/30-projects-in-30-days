@@ -262,3 +262,7 @@ p {
   overflow: hidden;
   background: white;
 }
+
+.rating.active{
+  color: gold;
+}
