@@ -8,15 +8,15 @@ viewdetails.addEventListener("click", () => {
   card.classList.add("active");
   top_div.classList.add("active");
   top_div.innerHTML = `<div class="image_slider">
-              <img src="https://th.bing.com/th/id/OIP.V3yfC8dTPQSNwPsI7a_uygHaFE?w=281&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
-              <img src="https://th.bing.com/th/id/OIP.XQreaeMZpkz_8u5ziN4VqwHaHa?pid=ImgDet&w=179&h=179&c=7&dpr=1.3" alt="">
-              <img src="https://th.bing.com/th/id/OIP.kvQ7lgbteXLLj9q6PC6T0wHaE8?w=1200&h=800&rs=1&pid=ImgDetMain" alt="">
+              <img src="https://i.pinimg.com/originals/d3/3e/95/d33e95e207409630f32bc37e0cea8f74.jpg" alt="">
+              <img src="https://s3.amazonaws.com/tasmeemme.project.mi.thumbnails/resize_805x9000/559/623559.jpg" alt="">
+              <img src="https://2.bp.blogspot.com/-aZbrzuy8H8E/V0S045mmb9I/AAAAAAAAACk/BlwBEIvJOc4cXDY59VtHeDMxApwdcfvQwCLcB/s1600/nike%2B6.jpg" alt="">
 
             </div>
             <div class="thumbnail">
-              <img id="thumb1" src="https://th.bing.com/th/id/OIP.V3yfC8dTPQSNwPsI7a_uygHaFE?w=281&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
-              <img id="thumb2" src="https://th.bing.com/th/id/OIP.XQreaeMZpkz_8u5ziN4VqwHaHa?pid=ImgDet&w=179&h=179&c=7&dpr=1.3" alt="">
-              <img id="thumb3" src="https://th.bing.com/th/id/OIP.kvQ7lgbteXLLj9q6PC6T0wHaE8?w=1200&h=800&rs=1&pid=ImgDetMain" alt="">
+              <img id="thumb1" src="https://i.pinimg.com/originals/d3/3e/95/d33e95e207409630f32bc37e0cea8f74.jpg" alt="">
+              <img id="thumb2" src="https://s3.amazonaws.com/tasmeemme.project.mi.thumbnails/resize_805x9000/559/623559.jpg" alt="">
+              <img id="thumb3" src="https://2.bp.blogspot.com/-aZbrzuy8H8E/V0S045mmb9I/AAAAAAAAACk/BlwBEIvJOc4cXDY59VtHeDMxApwdcfvQwCLcB/s1600/nike%2B6.jpg" alt="">
 
 
             </div>`;
@@ -63,4 +63,34 @@ viewdetails.addEventListener("click", () => {
             <span>Add to cart</span>
           </div>`;
   //   top_div.innerHTML = ``;
+  const imageDiv = document.querySelector(".image_slider");
+
+  const thumb1 = document.getElementById("thumb1");
+  const thumb2 = document.getElementById("thumb2");
+  const thumb3 = document.getElementById("thumb3");
+
+  thumb1.addEventListener("click", () => {
+    thumb1.classList.add("active");
+    thumb2.classList.remove("active");
+    thumb3.classList.remove("active");
+    imageDiv.style.transform = `translateX(0px)`;
+    consol.log("Transform applied:", imageDiv.style.transform); // Debugging log
+  });
+
+  thumb2.addEventListener("click", () => {
+    thumb1.classList.remove("active");
+    thumb3.classList.remove("active");
+    thumb2.classList.add("active");
+    imageDiv.style.transform = `translateX(-500px)`;
+    consol.log("Transform applied:", imageDiv.style.transform); // Debugging log
+  });
+
+  thumb3.addEventListener("click", () => {
+    thumb3.classList.add("active");
+    thumb1.classList.remove("active");
+    thumb2.classList.remove("active");
+
+    imageDiv.style.transform = `translateX(-1000px)`;
+    consol.log("Transform applied:", imageDiv.style.transform); // Debugging log
+  });
 });
