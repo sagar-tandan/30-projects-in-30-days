@@ -27,8 +27,8 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  transition: transform 0.3s ease-in-out, width 0.3s ease-in,
-    height 0.3s ease-in;
+  transition: width 0.3s cubic-bezier(.28,-0.85,.25,2.01),
+    display 0.3s cubic-bezier(0.75, -0.86, 0, 1.56), transform 0.3s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
@@ -143,4 +143,71 @@ p {
 
 .card:hover {
   transform: translateY(-15px);
+}
+
+.card.active {
+  width: 1024px;
+  display: flex;
+  flex-direction: row;
+}
+
+.shoe.active {
+  display: none;
+}
+
+/* CSS for detail page */
+.oldprice {
+  color: red;
+  text-decoration: line-through;
+}
+
+.newPrice {
+  color: blue;
+  font-weight: bold;
+}
+
+.productdetails {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+}
+
+.table {
+  padding: 0px 10%;
+  margin-top: 20px;
+}
+
+.table .condition {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table .condition .conditionText {
+  color: blue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+.table .condition .answer {
+  color: green;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.cart {
+  width: 100%;
+  border-radius: 3px;
+  color: white;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.cart span {
+  margin-top: 10px;
+  width: 120px;
+  background-color: rgb(79, 79, 230);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
 }
