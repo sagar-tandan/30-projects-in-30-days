@@ -2,9 +2,21 @@ const time = document.querySelector(".time");
 
 setInterval(() => {
   const timer = new Date();
-  const hours = timer.getHours();
-  const min = timer.getMinutes();
-  const sec = timer.getSeconds();
-
-  time.innerHTML = `${hours} : ${min} : ${sec}`;
+  let hours = timer.getHours();
+  let min = timer.getMinutes();
+  let sec = timer.getSeconds();
+  if (hours > 12) {
+    hours = hours - 12;
+  }
+  if (min < 10) {
+    min = "0" + min;
+  }
+  if (sec < 10) {
+    sec = "0" + sec;
+  }
+  {
+    hours < 10
+      ? (time.innerHTML = `0${hours} : ${min} : ${sec}`)
+      : (time.innerHTML = `${hours} : ${min} : ${sec}`);
+  }
 }, 1000);
