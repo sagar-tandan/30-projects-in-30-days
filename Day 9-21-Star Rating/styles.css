@@ -14,10 +14,8 @@ body {
   font-size: 50px;
   cursor: pointer;
   color: black;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s linear;
 }
-
-
 
 .star.active {
   color: orange;
