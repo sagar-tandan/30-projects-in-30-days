@@ -11,7 +11,7 @@ stars.forEach((star, index) => {
 
     for (i = 0; i <= index; i++) {
       console.log(stars[i]);
-      stars[i].style.color = `gold`;
+      stars[i].style.color = `orange`;
     }
   });
 });

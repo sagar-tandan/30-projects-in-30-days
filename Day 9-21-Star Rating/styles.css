@@ -4,6 +4,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.container {
+  display: flex;
+  gap: 15px;
+}
+
 .container span {
   font-size: 50px;
   cursor: pointer;
@@ -11,10 +17,8 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
-span:hover {
-  color: gold;
-}
+
 
 .star.active {
-  color: gold;
+  color: orange;
 }
