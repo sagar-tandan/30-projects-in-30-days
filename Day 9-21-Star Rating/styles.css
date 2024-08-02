@@ -1,0 +1,20 @@
+body {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container span {
+  font-size: 50px;
+  cursor: pointer;
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+span:hover {
+  color: gold;
+}
+
+.star.active {
+  color: gold;
+}
