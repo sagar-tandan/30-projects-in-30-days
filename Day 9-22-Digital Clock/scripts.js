@@ -1,6 +1,10 @@
 const time = document.querySelector(".time");
-
+setTime();
 setInterval(() => {
+  setTime();
+}, 1000);
+
+function setTime() {
   const timer = new Date();
   let hours = timer.getHours();
   let min = timer.getMinutes();
@@ -19,4 +23,4 @@ setInterval(() => {
       ? (time.innerHTML = `0${hours} : ${min} : ${sec}`)
       : (time.innerHTML = `${hours} : ${min} : ${sec}`);
   }
-}, 1000);
+}
