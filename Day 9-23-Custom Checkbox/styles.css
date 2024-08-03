@@ -15,6 +15,8 @@ body {
   align-items: center;
   width: 200px;
   margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 input {
@@ -42,9 +44,38 @@ input:checked + .label {
   position: absolute;
   top: 3px;
   left: 3px;
-  transition: transform 0.4s ease-in-out;
+  /* transition: transform 0.4s ease-in-out; */
+  animation: slideOff 0.3s linear forwards;
 }
 
-.ball.active {
+/* .ball.active {
   transform: translateX(40px);
+} */
+
+input:checked + .label .ball {
+  animation: slideOn 0.3s linear forwards;
+}
+
+@keyframes slideOn {
+  0% {
+    transform: translate(0) scale(1);
+  }
+  50% {
+    transform: translate(20px) scale(1.2);
+  }
+  100% {
+    transform: translate(40px) scale(1);
+  }
+}
+
+@keyframes slideOff {
+  0% {
+    transform: translate(40px) scale(1);
+  }
+  50% {
+    transform: translate(20px) scale(1.2);
+  }
+  100% {
+    transform: translate(0) scale(1);
+  }
 }
