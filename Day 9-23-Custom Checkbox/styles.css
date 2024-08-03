@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+body {
+  font-family: "Muli", Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.toogle-container {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  margin: 10px 0;
+}
+
+input {
+  visibility: hidden;
+}
+
+.label {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  background-color: #d0d0d0;
+  border-radius: 20px;
+  margin: 0px 15px 0px 0px;
+}
+
+input:checked + .label {
+  background-color: blueviolet;
+}
+
+.ball {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
