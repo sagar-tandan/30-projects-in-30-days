@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.count-container {
+  width: 100%;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 100px;
+  padding: 10px 0px;
+  outline: none;
+  background-color: bisque;
+  border: none;
+  border-radius: 4px;
+  margin: 6px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
