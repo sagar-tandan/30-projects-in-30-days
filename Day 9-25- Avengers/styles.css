@@ -1,0 +1,82 @@
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.avenger {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.hulk {
+  z-index: 1;
+  width: 600px;
+  position: absolute;
+  bottom: -100px;
+}
+
+.ironman {
+  z-index: 2;
+  width: 400px;
+  position: absolute;
+  right: -100px;
+  bottom: -40px;
+}
+
+.bp {
+  z-index: 0;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  right: 150px;
+}
+.thor {
+  z-index: 0;
+  width: 500px;
+  position: absolute;
+  top: -20px;
+  left: -40px;
+}
+
+.cap {
+  z-index: 3;
+  width: 400px;
+  position: absolute;
+  left: -15px;
+  bottom: -100px;
+}
+
+.antman {
+  z-index: 4;
+  position: absolute;
+  width: 200px;
+  left: 0;
+  bottom: -70px;
+}
+
+.hawkeye {
+  z-index: 0;
+  position: absolute;
+  width: 500px;
+  right: -120px;
+  top: 0;
+}
+
+.Container:hover img:not(:hover) {
+  filter: grayscale(1) blur(10px);
+  transition: filter 0.4s ease-in-out;
+}
