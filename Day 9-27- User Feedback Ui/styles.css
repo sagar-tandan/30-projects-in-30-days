@@ -31,6 +31,8 @@ h3 {
   display: flex;
   justify-content: center;
   margin: 0px;
+  font-size: 15px;
+  font-weight: 100;
 }
 
 .emotions {
@@ -40,12 +42,12 @@ h3 {
 }
 
 .emotion {
-  border: 1px solid lightblue;
   width: 100px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   padding: 10px 0px;
+  gap: 5px;
   background-color: white;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -62,6 +64,8 @@ h3 {
   border: 2px solid lightblue;
   border-radius: 5px;
   font-size: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
 }
 
 .buttons {
@@ -109,4 +113,13 @@ h3 {
 
 .cancel:active {
   transform: scale(0.9);
+}
+
+.emotion.active {
+  box-shadow: rgba(255, 15, 119, 0.15) 0px 5px 15px 3px;
+}
+
+.errorMessage {
+  color: red;
+  margin: 0px 5px;
 }
