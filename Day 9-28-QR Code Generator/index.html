@@ -7,7 +7,16 @@
     <title>QR Generator</title>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <label for="input">Enter the text or URL</label>
+      <input type="text" placeholder="Text or URL " class="input" id="input" />
+      <img
+        class="QrImage"
+        src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example"
+        alt=""
+      />
+      <button class="submit">Generate QR Code</button>
+    </div>
     <script src="scripts.js"></script>
   </body>
 </html>
