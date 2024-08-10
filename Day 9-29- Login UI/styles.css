@@ -71,6 +71,7 @@ form {
 .labelRemeber,
 .forgetPass {
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .checkbox {
@@ -89,5 +90,29 @@ form {
 }
 
 .submit:active {
+  transform: scale(0.98);
+}
+
+.register {
+  margin-top: 20px;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.register .registerSpan {
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.registerSpan:hover {
+  color: aqua;
+}
+
+.forgetPass:hover {
+  color: aqua;
+}
+
+.registerSpan:active {
   transform: scale(0.98);
 }
