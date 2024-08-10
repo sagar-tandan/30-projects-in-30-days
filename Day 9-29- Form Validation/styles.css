@@ -2,18 +2,92 @@
 
 body {
   font-family: "Poppins", Courier, monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: rgb(212, 238, 247); */
+  background: url("https://img.freepik.com/free-photo/japan-background-digital-art_23-2151546131.jpg?t=st=1723281114~exp=1723284714~hmac=57aeb133ba45fcd2bf3bc19f93eb45360e52eea6eba1a4f51a85d47c478bf6ee&w=1778")
+    no-repeat center;
+  background-size: cover;
 }
 
 .container {
-  width: 400px;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 350px;
   display: flex;
   flex-direction: column;
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 50px;
+  color: white;
+  backdrop-filter: blur(5px);
+}
+
+.login {
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
+}
+
+.Emaillabel,
+.PasswordLabel {
+  font-size: 20px;
+  margin: 8px 0px;
+}
+
+.email,
+.password {
+  padding: 10px 5px;
+  border: 1px solid lightblue;
+  border-radius: 3px;
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  outline: none;
+  margin-bottom: 5px;
+}
+
+.email::placeholder,
+.password::placeholder {
+  color: #c1c1c1;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+  font-size: 18px;
+  align-items: center;
+}
+
+.labelRemeber,
+.forgetPass {
+  cursor: pointer;
+}
+
+.checkbox {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.submit {
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+.submit:active {
+  transform: scale(0.98);
 }

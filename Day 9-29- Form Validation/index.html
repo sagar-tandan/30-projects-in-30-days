@@ -4,10 +4,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
 
-    <title>QR Generator</title>
+    <title>Login Form</title>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <form action="">
+        <div class="login">Login Form</div>
+        <label class="Emaillabel" for="Email">Email</label>
+        <input
+          required
+          type="email"
+          placeholder="Email address"
+          class="email"
+          id="email"
+        />
+        <label class="PasswordLabel" for="password">Password</label>
+        <input
+          required
+          type="password"
+          placeholder="Password"
+          class="password"
+          id="password"
+        />
+        <div class="main">
+          <div class="remember">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label class="labelRemeber" for="checkbox">Remember me</label>
+          </div>
+          <div class="forgetPass">Forget Password?</div>
+        </div>
+        <button class="submit">Login</button>
+        <!-- <div class="register">
+          Don't have an account? <span class="registerSpan">Register Now</span>
+        </div> -->
+      </form>
+    </div>
     <script src="scripts.js"></script>
   </body>
 </html>
