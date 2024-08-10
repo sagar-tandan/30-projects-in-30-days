@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  font-family: "Poppins", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(212, 238, 247); */
+}
+
+.container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  align-items: center;
+}
