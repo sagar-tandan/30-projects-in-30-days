@@ -1,3 +1,10 @@
+const div = document.querySelector(".container");
+
+div.innerHTML = `<h1>URL Shortener</h1>
+        <input type="text" id="url-input" placeholder="Enter URL to shorten">
+        <button id="shorten-btn">Shorten URL</button>
+        <p id="shortened-url"></p>`;
+
 const button = document.getElementById("shorten-btn");
 const input = document.getElementById("url-input");
 const apiKey = "GhVjfrrVh6xiEeWPUaEY0EwGJEBbhULjnfue4nhFtzoPeB77NqCz24uGsC67";
